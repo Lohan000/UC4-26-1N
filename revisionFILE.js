@@ -77,3 +77,28 @@ const ask = require('readline-sync');
 
 // let myArray = [7, 6, 4, 22, 13]
 // calculateSum(myArray)
+
+// 8
+
+
+//9
+
+
+// 10
+function SELECTION() {
+  frutas = ['Abacaxi', 'manga', 'banana']
+  for(let i = 0; i < 4; i++){
+    console.log(`${frutas[i}`)
+  }
+}
+//11
+function{
+const pessoa = {
+  nome:'Lohan',
+  idade:16
+};
+for (const chave in pessoa){
+    console.log(`${chave}: ${pessoa[chave]}`)
+  }
+  
+}
