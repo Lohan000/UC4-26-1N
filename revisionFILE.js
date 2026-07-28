@@ -98,7 +98,37 @@ const pessoa = {
   idade:16
 };
 for (const chave in pessoa){
-    console.log(`${chave}: ${pessoa[chave]}`)
+    console.log(`${chave}: ${pessoa[chave]}`);
   }
   
 }
+// 12
+function parate20() {
+    for (i = 0; i < 20; i+2){
+      console.log(`${i}`)
+    }
+}
+// 13
+let a = 1
+let b = 2
+function (number1, number2){
+  if (number1 > number2){
+    console.log(`${number1} é maior que ${number2}`);
+  } else if (number1 < number2){
+    console.log(`${number1} é menor que ${number2}`);
+  } else {
+    console.log(`${number1} é igual a ${number2}`);
+  }
+}
+// 14
+
+
+
+
+
+
+// 15
+a = ask.question(`Nome:`)
+b = ask.question(`idade: `)
+
+console.log(`Olá ${a}, voce tem ${b} anos, ne? Seja bem vindo!`)
