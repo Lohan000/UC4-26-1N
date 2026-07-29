@@ -48,4 +48,6 @@
 // console.log(`ADMIN: ${ADMIN}, USER: ${USER}, GUEST: ${GUEST}`)
 
 // 6
-let usuario: {nome: string, }
+let pessoa: {nome: string, idade: number, gmail: string}
+
+//7

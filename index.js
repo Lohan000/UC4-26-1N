@@ -24,13 +24,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // let boom: [string, number] = ['Igor', 16]
 // console.log(boom)
 // 5
-var boom;
-(function (boom) {
-    boom[boom["ACESSO_COMPLETO"] = 0] = "ACESSO_COMPLETO";
-    boom[boom["ACESSO_BASICO"] = 1] = "ACESSO_BASICO";
-    boom[boom["ACESSO_MINIMO"] = 2] = "ACESSO_MINIMO";
-})(boom || (boom = {}));
-let ADMIN = boom.ACESSO_COMPLETO;
-let USER = boom.ACESSO_BASICO;
-let GUEST = boom.ACESSO_MINIMO;
-console.log(`ADMIN: ${ADMIN}, USER: ${USER}, GUEST: ${GUEST}`);
+// enum boom {
+//     ACESSO_COMPLETO,
+//     ACESSO_BASICO,
+//     ACESSO_MINIMO
+// }
+// let ADMIN: boom = boom.ACESSO_COMPLETO
+// let USER: boom = boom.ACESSO_BASICO
+// let GUEST: boom = boom.ACESSO_MINIMO
+// console.log(`ADMIN: ${ADMIN}, USER: ${USER}, GUEST: ${GUEST}`)
+// 6
+let pessoa;
+//7

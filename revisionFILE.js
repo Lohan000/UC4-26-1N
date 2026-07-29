@@ -66,7 +66,30 @@ const ask = require('readline-sync');
 //         console.log('Erro')
 //         break
 // }
+// 6
 
+// let menu = Number(ask.question(`1 - coca-cola
+// 2 - Guarana
+// 3 - cafe
+
+// SELECIONE SEU PRODUTO PARA VER O PRECO:`))
+// function menu1(number){
+//     switch (number){
+//     case 1:
+//         console.log('R$5,00')
+//         break
+//     case 2:
+//         console.log('R$6,00')
+//         break
+//     case 3:
+//         console.log('R$90,00')
+//         break
+//     default:
+//         console.log('Erro')
+//         break
+//    }
+// }
+// menu1(menu)
 // 7
 // function calculateSum(numbers){
 //     let soma = 0
@@ -79,56 +102,96 @@ const ask = require('readline-sync');
 // calculateSum(myArray)
 
 // 8
+// let i = 0
+// while (i < 11){
+//     console.log(i)
+//     i++;
+// }
 
-
-//9
-
+// 9
+// function test3() {
+//     frutas = ['Abacaxi', 'manga', 'banana']
+//     for(fruta of frutas){
+//         console.log(`${fruta}`)
+//     }
+// }
+// test3()
 
 // 10
-function SELECTION() {
-  frutas = ['Abacaxi', 'manga', 'banana']
-  for(let i = 0; i < 4; i++){
-    console.log(`${frutas[i}`)
-  }
-}
+
+// function SELECTION() {
+//   frutas = ['Abacaxi', 'manga', 'banana']
+//   for(let i = 0; i < 3; i++){
+//     console.log(`${frutas[i]}`)
+//   }
+// }
+// SELECTION()
+
 //11
-function{
-const pessoa = {
-  nome:'Lohan',
-  idade:16
-};
-for (const chave in pessoa){
-    console.log(`${chave}: ${pessoa[chave]}`);
-  }
+// function teste(){
+//     const pessoa = {
+//     nome:'Lohan',
+//     idade:16
+//     };
+//     for (const chave in pessoa){
+//     console.log(`${chave}: ${pessoa[chave]}`);
+//   }
   
-}
+// }
+// teste()
+
 // 12
-function parate20() {
-    for (i = 0; i < 20; i+2){
-      console.log(`${i}`)
-    }
-}
-// 13
-let a = 1
-let b = 2
-function (number1, number2){
-  if (number1 > number2){
-    console.log(`${number1} é maior que ${number2}`);
-  } else if (number1 < number2){
-    console.log(`${number1} é menor que ${number2}`);
-  } else {
-    console.log(`${number1} é igual a ${number2}`);
-  }
-}
+// function parate20() {
+//     for (let i = 0; i < 21; i++){
+//         if (i % 2 == 0){
+//             console.log(`${i}`)
+//         }
+//     }
+// }
+
+// parate20()
+
+// // 13
+// let a = 3
+// let b = 2
+// function boom(number1, number2){
+//   if (number1 > number2){
+//     console.log(`${number1} é maior que ${number2}`);
+//   } else if (number1 < number2){
+//     console.log(`${number1} é menor que ${number2}`);
+//   } else {
+//     console.log(`${number1} é igual a ${number2}`);
+//   }
+// }
+
+// boom(a, b)
 // 14
 
+// let question = ask.question('Me da um número para ver se é primo: ')
 
+// function calculateSum(numbers){
+//     let soma = 0
+//     for(let num of numbers){
+//         let primo = true
+//         if (num <2){
+//             primo = false
+//         }
+//         for(let j = 2; j < num; j++){
+//             if(num % j === 0){
+//                 primo = false
+//             }
+//         }
+//         if (primo){
+//             soma += num
+//         }
+//     }
+//     console.log(soma)
+// }
 
-
-
+// calculateSum(question)
 
 // 15
-a = ask.question(`Nome:`)
-b = ask.question(`idade: `)
+// a = ask.question(`Nome:`)
+// b = ask.question(`idade: `)
 
-console.log(`Olá ${a}, voce tem ${b} anos, ne? Seja bem vindo!`)
+// console.log(`Olá ${a}, voce tem ${b} anos, ne? Seja bem vindo!`)
