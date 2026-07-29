@@ -1,0 +1,25 @@
+Warrior
+Saude: 100
+NOME: Leferson
+TIPO:warrior
+Força
+Agilidade
+Inteligência
+Energia
+Durabilidade
+-----------
+correr()
+atacar()
+defender()
+inspecionar()
+equipar()
+
+
+Monster
+Saude: 10
+Força:50
+Nome:Lataison
+--------------
+atacar()
+correr()
+defender()
