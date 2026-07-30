@@ -1,16 +1,16 @@
 export class Dog{
-    name: string
-    weight: number
+    private name: string
+    private weight: number
 
-    constructor(nameParameter: string, weightParameter:number){
+    constructor(public nameParameter: string, public weightParameter:number){
         this.name = nameParameter
         this.weight = weightParameter
     }
 
-    bark(): void{
+    public bark(): void{
         console.log(`au au`)
     }
-    eat(): void{
+    public eat(): void{
         console.log(`nham nham`)
     }
 }

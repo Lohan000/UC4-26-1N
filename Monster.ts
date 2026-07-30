@@ -1,18 +1,35 @@
 export class Monster{
-    name: string
-    type: string
-    strength: number
-    life: number
+    private name: string
+    private type: string
+    private strength: number
+    private life: number
 
-    constructor(nameParameter: string, typeParameter: string, strengthParameter: number, lifeParameter)
+    constructor(public nameParameter: string, public typeParameter: string){
+        this.name = nameParameter;
+        this.type = typeParameter;
+        this.strength = 20;
+        this.life = 50;
+    }
 
-    attack(): void {
+    public getName(): string{
+        return this.name
+    }
+    public setter(newname: string): void{
+        this.name = newname
+    }
+    public getforca(): number{
+        return this.strength
+    }
+    public setterforca(newforca: number): void{
+        this.strength = newforca
+    }
+    public attack(): void {
         console.log(`tome seu nojento`)
     }
-    defend(): void {
+    public defend(): void {
         console.log(`Defende`)
     }
-    dodge(): void {
+    public dodge(): void {
         console.log('Esquiva e te mato')
     }
 }
