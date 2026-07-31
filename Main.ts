@@ -1,24 +1,28 @@
-import { Warrior } from "./Warrior";
-import { Monster } from "./Monster";
+// import { Person } from "./Person";
 
-const warrior1: Warrior = new Warrior('lohan','Guerreiro')
-const warrior2: Warrior = new Warrior('Lialvan', 'Espadachim')
-const monster1: Monster = new Monster('Gugaga', 'Bebelord')
-const monster2: Monster = new Monster('Manha', 'SIUUUUUUUu')
+// let Person1: Person = new Person ('Lialvan', 19)
+// let Person2: Person = new Person ('Logetto', 30)
 
-// console.log(monster1.getName())
-// monster1.attack()
-// console.log(warrior1.getName())
-// warrior1.dodge()
+// console.log(Person1.getName())
+// console.log(Person1.getAge())
 
-// import { Dog } from "./Dog";
+// console.log(Person2.getName())
+// console.log(Person2.getAge())
 
-// const dog1: Dog = new Dog(`Rodolfo`, 0)
+// Person2.setAge(27)
 
-// dog1.bark()
+// console.log(Person2.getAge())
 
-warrior1.setter('Lialvan')
-console.log(warrior1.getName())
+// import { car } from "./car";
 
-monster1.setterforca(10)
-console.log(monster1.getforca())
+// let car1: car = new car ('Fusquinha amarelinha', 'VROOM', 2009)
+
+// car1.acelerate(-1)
+// car1.showinformation()
+
+// car1.acelerate(50000000000)
+// car1.showinformation()
+
+// car1.brake(500000000000000000000)
+// car1.showinformation()
+
