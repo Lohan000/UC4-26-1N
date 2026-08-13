@@ -1,53 +1,19 @@
-// let nome: string = "Daniel";
-// console.log("Olá, " + nome);
+import { Mamifero } from "./Mamifero";
+import { Reptil } from "./Reptil";
 
-// 1
-// function vezes(a: number): number {
-//     return a * 2
-// }
+// // Criando objetos
+// const cachorro = new Mamifero("Rex", 5, true);
+// const cobra = new Reptil("Naja", 2, "escamas lisas");
 
-// let nome: number = 2
+// cachorro.mover();      // herdado da classe Animal
+// cachorro.amamentar();  // método da classe Mamifero
 
-// console.log(vezes(nome))
+// cobra.mover();         // herdado da classe Animal
+// cobra.botarOvo();      // método da classe Reptil
 
-// 2
-// function saudacao(a: string): string {
-//     return `Olá ${a}`
-// }
+import { Crocodile } from "./crocodile"
 
-// let nome: string = `Lohan`
+// const crocodilo = new Crocodile('Pablo', 99, 'Dura')
 
-// console.log(saudacao(nome))
+// crocodilo.swim()
 
-// 3
-// let nome: string[] = ['Lialvan', 'Loven', 'Logetto', 'Losguerren']
-
-// function boom(a: string[]): void{
-//     for(const f of nome) console.log(f);
-
-// }
-
-// boom(nome)
-
-// 4
-// let boom: [string, number] = ['Igor', 16]
-
-// console.log(boom)
-
-// 5
-// enum boom {
-//     ACESSO_COMPLETO,
-//     ACESSO_BASICO,
-//     ACESSO_MINIMO
-// }
-
-// let ADMIN: boom = boom.ACESSO_COMPLETO
-// let USER: boom = boom.ACESSO_BASICO
-// let GUEST: boom = boom.ACESSO_MINIMO
-
-// console.log(`ADMIN: ${ADMIN}, USER: ${USER}, GUEST: ${GUEST}`)
-
-// 6
-let pessoa: {nome: string, idade: number, gmail: string}
-
-//7
