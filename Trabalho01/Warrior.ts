@@ -7,11 +7,12 @@ export class Warrior extends Character{
 
     public constructor(name: string, level: number, health: number, strength: number, Weapon: Weapon){
         super(name, level, health)
-        this.
+        this.strength = strength
+        this.Weapon = Weapon
     }
     
     public attack(): void{
         console.log(` ${this.name} attacks with ${this.Weapon.getterName()}!
-Damage: ${this.Weapon.getterDamage()}`)
+Damage: ${this.Weapon.getterDamage() + this.strength}`)
     }
 }
