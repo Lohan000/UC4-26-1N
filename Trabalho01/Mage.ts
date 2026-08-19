@@ -26,13 +26,17 @@ export class Mage extends Character{
         this.spell = newSpell
     }
 
-    public castSpell(spell1: Spell): void{
-        if (this.mana > spell1.getterManaCost()){
-            console.log(`${this.name} casts ${spell1.getterName()}
-Damage: ${spell1.getterDamage()}
+    public castSpell(unknownspell: Spell): void{
+        if (unknownspell == this.spell){
+            if (this.mana > unknownspell.getterManaCost()){
+                console.log(`${this.name} casts ${unknownspell.getterName()}
+Damage: ${unknownspell.getterDamage()}
 Mana remaining: ${this.mana}`)
-    } else {
-        console.log(`${this.name} does not have enough mana!`)
-    }
+            } else {
+                console.log(`${this.name} does not have enough mana!`)
+            }
+        } else {
+            console.log('You dont know this magic...')
+        }
     }
 }
