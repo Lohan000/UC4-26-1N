@@ -38,8 +38,14 @@ export class Party{
     }
 
     public showMembers(): void{
+        console.log(`
+----------------------------------
+${this.name}
+----------------------------------`)
         for(let member of this.members){
-            console.log(`${member.getterName()} - Level ${member.getterLevel()}`)
+            console.log(`${member.getterName()} - Level ${member.getterLevel()
+                
+            }`)
         }
     }
 }

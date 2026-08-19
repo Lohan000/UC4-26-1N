@@ -25,11 +25,13 @@ export class Weapon {
 
     public showInfo(): void{
         console.log(`
+
 ----------------
 Weapon            
 ----------------
 Name: ${this.name}
 Damage: ${this.damage}
+
 `)
     }
 }

@@ -10,9 +10,28 @@ export class Warrior extends Character{
         this.strength = strength
         this.Weapon = Weapon
     }
+
+    public getterStrength(): number{
+        return this.strength
+    }
+
+    public setterStrength(newStrength: number): void{
+        this.strength = newStrength
+    }
+
+    public getterWeapon(): Weapon{
+        return this.Weapon
+    }
+
+    public setterWeapon(newWeapon: Weapon): void{
+        this.Weapon = newWeapon
+    }
     
     public attack(): void{
+
         console.log(` ${this.name} attacks with ${this.Weapon.getterName()}!
-Damage: ${this.Weapon.getterDamage() + this.strength}`)
+Damage: ${this.Weapon.getterDamage() + this.strength}
+
+`)
     }
 }

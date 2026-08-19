@@ -45,8 +45,10 @@ LEVEL: ${this.level}`)
 
     public TakeDamage(amount: number): void{
         if(this.health > amount){
+            console.log(`${this.name} takes ${amount} Damage`)
             this.health -= amount
         } else {
+            console.log(`${this.name} takes ${amount} Damage`)
             this.health = 0
             console.log('Seu Personagem morreu')
         }

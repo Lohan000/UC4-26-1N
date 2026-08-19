@@ -36,12 +36,14 @@ export class Spell{
 
     showInfo(): void{
         console.log(`
+
 --------------------
 Spell
 --------------------
 Name: ${this.name}
 Damage: ${this.damage}
 ManaCost: ${this.Manacost}            
+
 `)
     }
 }
