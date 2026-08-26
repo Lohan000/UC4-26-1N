@@ -3,8 +3,8 @@ import { Resident } from "./Resident";
 export class Soldier extends Resident{
     public chosenClass: string
 
-    constructor(name: string,health: number,age: number, chosenClass: string){
-        super(name, health, age)
+    constructor(name: string,age: number){
+        super(name, age)
         this.chosenClass = 'Soldier'
     }
 
@@ -12,8 +12,8 @@ export class Soldier extends Resident{
         return this.name
     }
 
-    public getterHealth(): number{
-        return this.health
+    public getterChosenClass(): string{
+        return this.chosenClass
     }
 
     public getterAge(): number{
@@ -24,8 +24,8 @@ export class Soldier extends Resident{
         this.name = newName
     }
 
-    public setterHealth(newHealth: number): void{
-        this.health = newHealth
+    public setterChosenClass(newClass: string): void{
+        this.chosenClass = newClass
     }
 
     public setterAge(newAge: number): void{

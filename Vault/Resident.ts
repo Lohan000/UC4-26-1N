@@ -2,7 +2,7 @@ export class Resident {
     protected name: string;
     protected age: number;
 
-    public constructor(name: string,health: number,age: number){
+    public constructor(name: string, age: number){
         this.name = name
         this.age = age
     }
