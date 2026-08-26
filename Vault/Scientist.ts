@@ -1,15 +1,19 @@
 import { Resident } from "./Resident";
 
-export class Medic extends Resident{
-    public chosenClass: string    
+export class Scientist extends Resident{
+    public chosenClass: string
 
-    public constructor(name: string, health: number, age: number, chosenClass: string){
+    constructor(name: string,health: number,age: number, chosenClass: string){
         super(name, health, age)
-        this.chosenClass = 'Médico'
+        this.chosenClass = 'Scientist'
     }
 
     public getterName(): string{
         return this.name
+    }
+
+    public getterChosenClass(): string{
+        return this.chosenClass
     }
 
     public getterAge(): number{
@@ -20,11 +24,12 @@ export class Medic extends Resident{
         this.name = newName
     }
 
+
     public setterAge(newAge: number): void{
         this.age = newAge
     }
 
-    public work(): void{
-        console.log(`the medic helps the pacient`)
+    public work(){
+        console.log(`The scientist studies...`)
     }
 }
