@@ -27,13 +27,18 @@ export class Place{
     }
 
     public addResident(newResident: Resident): void{
-        for(let i = 0; this.resident.length > i; i++){
+        if(this.resident.length + 1 > this.residentmax){
+            console.log(`Está cheio.`)
+        } else {
+            for(let i = 0; this.resident.length > i; i++){
             if(newResident === this.resident[i]){
                 console.log(`This Resident is already in...`)
             } else {
                 this.resident.push(newResident)
+                }
             }
         }
+
             
     }
 
