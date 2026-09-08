@@ -10,9 +10,8 @@ class Fighter extends Spacecraft implements CombatCapable {
     }
     attack(target: Spacecraft): number {
         console.log(`${this.Getname()} attacks ${target.Getname()},
-`)
+${target.Getname} receives ${this.WeaponPower} Damage!`)
         target.takeDamage(this.WeaponPower)
-        console.log(``)
         return this.WeaponPower
     }
     

@@ -34,6 +34,7 @@ export abstract class Spacecraft {
     public takeDamage(damage:number): void{
         if(this.health - damage < 0){
             this.health = 0
+            console.log("the Spaceshift is no longer operational")
         } else {
             this.health -= damage
         }
