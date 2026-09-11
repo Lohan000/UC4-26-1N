@@ -8,6 +8,8 @@ export class ExplorationShip extends Spacecraft implements Exploratory{
         super(id, name, fuel, health)
         this.currentLocation = `lobby` 
     }
+    
+
     explore(location: string): string {
         if(this.getFuel() - 10 > 0){
             this.currentLocation = location 
@@ -23,5 +25,37 @@ export class ExplorationShip extends Spacecraft implements Exploratory{
         } else {
             return `Data colected...`
         }
+    }
+
+        public getId(): number{
+        return this.getId()
+    }
+
+    public Getname(): string{
+        return this.Getname()
+    }
+
+    public getFuel(): number{
+        return this.getFuel()
+    }
+
+    public getHealth(): number{
+        return this.getHealth()
+    }
+
+    public refuel(): void{
+        this.refuel()
+    }
+
+    public takeDamage(damage:number): void{
+        this.takeDamage(damage)
+    }
+
+    public repair(): void{
+        this.repair()
+    }
+
+    public isOperational(): boolean{
+        return this.isOperational()
     }
 }

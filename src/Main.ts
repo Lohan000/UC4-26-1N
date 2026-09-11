@@ -6,16 +6,7 @@ import { ExplorationShip } from "./Ship/ExplorationShip";
 import { Fighter } from "./Ship/Fighter";
 import { MultiPurposeShip } from "./Ship/MultiPurposeShip";
 import { TransportShip } from "./Ship/TransportShip";
-
-const combatShips: CombatCapable[] = [];
-const ExploreShips: Exploratory[] = [];
-const TransportShips: CargoCarrier[] = [];
-
-combatShips.push(Fighter);
-combatShips.push(MultiPurposeShip);
-ExploreShips.push(ExplorationShip);
-
-
+import { Fleet } from "./Fleet/Fleet";
 
 function startCombat(ship: CombatCapable, target: Spacecraft): void{
         ship.attack(target)
@@ -25,7 +16,7 @@ function transportCargo(ship: CargoCarrier, amount: number): void{
     ship.loadCargo(amount)
 }
 
-function performExploration(ship: Spacecraft, location: string): void{
+function performExploration(ship: Exploratory, location: string): void{
     if(typeof ship.explore === "function"){
         ship.explore(location)
     ship.collectData()
@@ -36,12 +27,39 @@ function performExploration(ship: Spacecraft, location: string): void{
 }
 
 const fighter1 = new Fighter (1, `Logetto`, 100, 50, 10);
+const fighter2 = new Fighter(5, `Layana`, 100, 100, 10)
 const transportShip1 = new TransportShip (2, `Loven`, 100, 50, 10);
+const transportShip2 = new TransportShip (6, `Rodolfo`, 100, 100, 10)
 const explorationShip1 = new ExplorationShip(3, `Lialvan`, 100, 100);
-const multiPurposeShip1 = new MultiPurposeShip(4, `Lohan`, 100, 100, 10, 10);
+const explorationShip2 = new ExplorationShip(7, `Lyhan`, 100, 100)
+const multiPurposeShip1 = new MultiPurposeShip (4, `Lohan`, 100, 100, 20, 100, 10);
+
+
+Spacecraft.addShip(fighter1)
+Spacecraft.addShip(fighter2)
+Spacecraft.addShip(transportShip1)
+Spacecraft.addShip(transportShip2)
+Spacecraft.addShip(explorationShip1)
+Spacecraft.addShip(explorationShip2)
+Spacecraft.addShip(multiPurposeShip1)
+
+Spacecraft.Fleet()
+
+startCombat(fighter1, multiPurposeShip1)
+
+transportShip1.loadCargo(9)
+transportShip1.unloadCargo(9)
+
+performExploration(explorationShip1, `Mars`)
+performExploration(multiPurposeShip1, `Jupiter`)
 
 fighter1.attack(multiPurposeShip1)
 multiPurposeShip1.attack(fighter1)
-performExploration(explorationShip1, `Mars`)
-performExploration(multiPurposeShip1, `Jupiter`)
-performExploration(Fighter, 'Mars')
+
+
+console.log(multiPurposeShip1.getFuel())
+multiPurposeShip1.repair()
+console.log(multiPurposeShip1.getFuel())
+explorationShip1.refuel()
+
+console.log()

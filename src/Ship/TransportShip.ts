@@ -36,5 +36,37 @@ export class TransportShip extends Spacecraft implements CargoCarrier{
     getCurrentCargo(): number {
         return this.currentCargo
     }
+
+        public getId(): number{
+        return this.getId()
+    }
+
+    public Getname(): string{
+        return this.Getname()
+    }
+
+    public getFuel(): number{
+        return this.getFuel()
+    }
+
+    public getHealth(): number{
+        return this.getHealth()
+    }
+
+    public refuel(): void{
+        this.refuel()
+    }
+
+    public takeDamage(damage:number): void{
+        this.takeDamage(damage)
+    }
+
+    public repair(): void{
+        this.repair()
+    }
+
+    public isOperational(): boolean{
+        return this.isOperational()
+    }
     
 }

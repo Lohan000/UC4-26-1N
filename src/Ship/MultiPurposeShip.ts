@@ -3,24 +3,37 @@ import { CombatCapable } from "../Interface/CombatCapable";
 import { CargoCarrier } from "../Interface/CargoCarrier";
 import { ExplorationShip } from "./ExplorationShip";
 export class MultiPurposeShip extends Spacecraft implements CombatCapable, CargoCarrier, ExplorationShip{
-    private WeaponPower: number;
+    private Laserlevel: number;
+    private Energy: number;
     private cargoCapacity: number;
     private currentCargo: number;
     private currentLocation: string;
 
-    public constructor(id: number, name: string, fuel: number, health: number, WeaponPower: number, cargoCapacity: number){
+    public constructor(id: number, name: string, fuel: number, health: number, Laserlevel: number,Energy: number, cargoCapacity: number){
         super(id, name, fuel, health)
-        this.WeaponPower = WeaponPower
+        this.Laserlevel = Laserlevel
+        this.Energy = Energy
         this.cargoCapacity = cargoCapacity
         this.currentCargo = 0
         this.currentLocation = `Lobby`
     }
  
     attack(target: Spacecraft): number {
-        console.log(`${this.Getname()} attacks ${target.Getname()},
-${target.Getname} receives ${this.WeaponPower} Damage!`)
-        target.takeDamage(this.WeaponPower)
-        return this.WeaponPower
+        if(this.getHealth() > 0 ){
+            console.log(`${this.Getname()} attacks ${target.Getname()}!`)
+        if(this.Energy - this.Laserlevel > 0){
+            target.takeDamage(this.Laserlevel)
+            console.log(`${target.Getname} receives ${this.Laserlevel} Damage!`)
+            return this.Laserlevel
+        } else {
+            console.log(`your don't have enough energy`)
+            this.Laserlevel = 0
+        }
+        } else {
+            console.log('Bro your ship is destroyed buddy... Repair please...')
+            return 0
+        }
+        
     }
 
     loadCargo(amount: number): void {
@@ -66,6 +79,38 @@ ${target.Getname} receives ${this.WeaponPower} Damage!`)
         } else {
             return `Data colected...`
         }
+    }
+
+    public getId(): number{
+        return this.getId()
+    }
+
+    public Getname(): string{
+        return this.Getname()
+    }
+
+    public getFuel(): number{
+        return this.getFuel()
+    }
+
+    public getHealth(): number{
+        return this.getHealth()
+    }
+
+    public refuel(): void{
+        this.refuel()
+    }
+
+    public takeDamage(damage:number): void{
+        this.takeDamage(damage)
+    }
+
+    public repair(): void{
+        this.repair()
+    }
+
+    public isOperational(): boolean{
+        return this.isOperational()
     }
 
 }
