@@ -1,28 +1,110 @@
-// import { Person } from "./Person";
+import { Book } from "./book";
+import { clothes, clothes } from "./clothes";
+import { eletronic } from "./eletronic";
+import { stock } from "./stock";
+import { Toy, Toy } from "./Toy";
 
-// let Person1: Person = new Person ('Lialvan', 19)
-// let Person2: Person = new Person ('Logetto', 30)
+const estoqueLivros = new stock<Book>();
+const estoqueRoupas = new stock<clothes>();
+const estoqueBrinquedos = new stock<Toy>();
+const estoqueEletronicos = new stock<eletronic>();
+import readlineSync from "readline-sync";
 
-// console.log(Person1.getName())
-// console.log(Person1.getAge())
+let l = 9;
 
-// console.log(Person2.getName())
-// console.log(Person2.getAge())
+function menu(): void {
 
-// Person2.setAge(27)
+    while (l != 0) {
 
-// console.log(Person2.getAge())
+        l = Number(readlineSync.question(`
+=========================
+       STOCK SYSTEM
+=========================
 
-// import { car } from "./car";
+1 - Add product
 
-// let car1: car = new car ('Fusquinha amarelinha', 'VROOM', 2009)
+2 - List products
 
-// car1.acelerate(-1)
-// car1.showinformation()
+3 - Remove product
 
-// car1.acelerate(50000000000)
-// car1.showinformation()
+4 - Search products
 
-// car1.brake(500000000000000000000)
-// car1.showinformation()
+0 - Exit
+
+Choose an option:
+`));
+
+        switch (l) {
+            case 1:
+                let product = Number(readlineSync.question(`
+=========================
+       ADD PRODUCT
+=========================
+
+1 - Book
+2 - Clothing
+3 - Toy
+4 - Electronic
+
+Choose a product type: `));
+                switch (product) {
+                    case product = 1:
+                        let Title = readlineSync.question('Title of the book: ')
+                        let Author = readlineSync.question('Author of the book: ')
+                        let Prize = Number(readlineSync.question('Prize of the book: '))
+
+                        const book = new Book(Title, Author, Prize)
+                        break
+                    case product = 2:
+
+                        let desc = readlineSync.question('Description of the clothes')
+                        let size = readlineSync.question('What is the of the clothes?')
+                        let prize = Number(readlineSync.question('What is the prize of the clothes?'))
+
+                        const Clothes = new clothes(desc, size, prize)
+                        break
+                    case product = 3:
+
+                        let name = readlineSync.question('What is the name of the toy?')
+                        let ageMinimum = Number(readlineSync.question('What is the minimum age of the kid that need to play with the toy?'))
+                        let Prize1 = Number(readlineSync.question('Prize of the toy: '))
+
+                        const toy = new Toy(name, ageMinimum, Prize1)
+                        break
+                    case product = 4:
+
+                        let model = readlineSync.question('What is the model of the Eletronic? ')
+                        let mark = readlineSync.question('What is the mark of the Eletronic? ')
+                        let prize3 = Number(readlineSync.question('What is the prize of the Eletronic? '))
+                        break
+                    default:
+                        menu()
+                        break
+
+                } 
+                break;
+
+            case 2:
+                
+                // listar produtos
+                break;
+
+            case 3:
+                // remover produto
+                break;
+
+            case 4:
+                // procurar produto
+                break;
+
+            case 0:
+                console.log("Exiting...");
+                break;
+
+            default:
+                console.log("Invalid option!");
+        }
+    }
+}
+
 
