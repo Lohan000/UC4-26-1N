@@ -1,8 +1,8 @@
 import { Book } from "./book";
-import { clothes, clothes } from "./clothes";
+import { clothes } from "./clothes";
 import { eletronic } from "./eletronic";
 import { stock } from "./stock";
-import { Toy, Toy } from "./Toy";
+import { Toy } from "./Toy";
 
 const estoqueLivros = new stock<Book>();
 const estoqueRoupas = new stock<clothes>();
@@ -54,6 +54,7 @@ Choose a product type: `));
                         let Prize = Number(readlineSync.question('Prize of the book: '))
 
                         const book = new Book(Title, Author, Prize)
+                        estoqueLivros.adicionar(book)
                         break
                     case product = 2:
 
@@ -62,6 +63,8 @@ Choose a product type: `));
                         let prize = Number(readlineSync.question('What is the prize of the clothes?'))
 
                         const Clothes = new clothes(desc, size, prize)
+                        estoqueRoupas.adicionar(Clothes)
+                        
                         break
                     case product = 3:
 
@@ -70,12 +73,16 @@ Choose a product type: `));
                         let Prize1 = Number(readlineSync.question('Prize of the toy: '))
 
                         const toy = new Toy(name, ageMinimum, Prize1)
+                        estoqueBrinquedos.adicionar(toy)
                         break
                     case product = 4:
 
                         let model = readlineSync.question('What is the model of the Eletronic? ')
                         let mark = readlineSync.question('What is the mark of the Eletronic? ')
                         let prize3 = Number(readlineSync.question('What is the prize of the Eletronic? '))
+                        const eletronicbase = new eletronic(model, mark, prize3)
+
+                        estoqueEletronicos.adicionar(eletronicbase)
                         break
                     default:
                         menu()
@@ -86,6 +93,11 @@ Choose a product type: `));
 
             case 2:
                 
+                console.log(`Estoque livros:
+${estoqueLivros}
+------------------------
+Estoque Roupas:
+${}`)
                 // listar produtos
                 break;
 
