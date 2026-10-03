@@ -14,7 +14,7 @@ export class Food implements Donatable {
         this.productor = productor
     }
     donate(quantity: number): void {
-        
+        this.quantity -= quantity        
     }
 
     public addquantity(value: number): void{
